@@ -1,0 +1,6 @@
+#!/bin/sh
+./node_modules/.bin/webpack --watch --devtool inline-source-map &
+./node_modules/.bin/http-server
+
+kill %1
+kill %2

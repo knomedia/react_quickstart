@@ -1,17 +1,31 @@
 /** @jsx React.DOM */
 
 var React = require('react');
-var Link = require('react-router').Link;
+var Box = require('./components/box');
+
 
 var App = module.exports = React.createClass({
 
+  getInitialState: function() {
+    return {current: null};
+  },
+
+  handleSelect: function(position) {
+    this.setState({current: position});
+  },
+
   render: function() {
+    var boxes = ['top', 'right', 'bottom', 'left'].map(function(p){
+      var selected = this.state.current === p;
+      return (
+        <Box position={p}
+             onSelect={this.handleSelect}
+             isSelected={selected}/>
+      )
+    }.bind(this));
     return (
-      <div>
-        <h1>React QuickStart</h1>
-        <Link to='about'>About</Link>
-        <Link to='other'>Other</Link>
-        <this.props.activeRouteHandler />
+      <div className='App'>
+        {boxes}
       </div>
     )
   }

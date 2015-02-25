@@ -1,0 +1,44 @@
+body {
+  background: #e6e6e6;
+  color: #4c4c4c;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 300;
+}
+
+.App {
+  position: relative;
+}
+
+.Box {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+
+.Box_top {
+  left: 50px;
+}
+.Box_right {
+  left: 110px;
+  top: 110px;
+}
+.Box_bottom {
+  left: 50px;
+  top: 215px;
+}
+.Box_left {
+  top: 110px;
+}
+
+
+.Box_gray{
+  background: #808080;
+}
+
+.Box_yellow {
+  background: #ffff66;
+}
+
+.Box_full-green {
+  background: #408000;
+}
